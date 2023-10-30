@@ -33,6 +33,7 @@ body {
 }
 .sub__title {
   margin: 0;
+  margin-top: 5px;
   font-size: 16px;
   color: hsl(153, 71%, 59%);
 }
@@ -52,7 +53,7 @@ body {
   width: 300px;
   height: auto;
   cursor: pointer;
-  border: 1px red solid;
+  /* border: 1px red solid; */
 }
 /* ------------GLITCH -------------- */
 .description {
