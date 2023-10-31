@@ -38,19 +38,15 @@ body {
   color: hsl(153, 71%, 59%);
 }
 
-/* .container > * {
-  flex: 1;
-} */
-
 .images {
   width: 100%;
-  padding-top: 10px;
   display: flex;
-  gap: 40px;
-  justify-content: center;
+  flex-wrap: wrap;
+  /* gap: 50px; */
+  justify-content: space-evenly;
 }
 .choice__image {
-  width: 300px;
+  max-width: 300px;
   height: auto;
   cursor: pointer;
   /* border: 1px red solid; */
@@ -64,6 +60,7 @@ body {
   justify-content: center;
   text-align: center;
   background-color: hsl(0, 0%, 14%);
+  user-select: none;
 }
 
 .glitch {
@@ -121,5 +118,19 @@ body {
 
 /* -------------------------- */
 .footer {
+  width: 100%;
+  background-color: black;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.copyright {
   font-size: 18px;
+  margin-block: 5px;
+}
+.fa-github:before {
+  color: white;
+  font-size: 24px;
 }
