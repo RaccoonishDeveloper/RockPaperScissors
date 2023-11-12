@@ -141,6 +141,7 @@ button {
 .popup__message {
   font-weight: bold;
   font-size: 30px;
+  user-select: none;
 }
 
 .popup__button {
@@ -152,6 +153,7 @@ button {
   padding: 10px;
   cursor: pointer;
   transition: background-color 0.3s;
+  user-select: none;
 }
 
 .popup__button:hover {
