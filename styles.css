@@ -63,7 +63,7 @@ button {
 .tie__container {
 }
 .choice__image:hover {
-  box-shadow: 0px 0px 25px 10px #06e153;
+  filter: drop-shadow(0px 0px 25px #06e153);
 }
 /* ----- POPUP ----- */
 
