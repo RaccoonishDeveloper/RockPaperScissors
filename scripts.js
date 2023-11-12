@@ -45,33 +45,46 @@ function playRound(playerSelection, computerChoice) {
     } else {
       fightContext.children[0].textContent = `Both of you have chosen a Red Panda, they cuddle it out.`;
     }
+    fightContext.children[0].style.color = "yellow"; // or any color you want for a tie
   } else if ((playerSelection == choices[0]) & (computerChoice == choices[1])) {
     // LOST
     computerScore++;
-    fightContext.children[0].textContent = "Raccoon is destroyed by Fox!";
+    fightContext.children[0].textContent =
+      "Computer has chosen Fox, Raccoon is destroyed by Fox!";
+    fightContext.children[0].style.color = "red";
   } else if ((playerSelection == choices[0]) & (computerChoice == choices[2])) {
     // WON
     playerScore++;
-    fightContext.children[0].textContent = "Raccoon decimates Red Panda!";
+    fightContext.children[0].textContent =
+      "Computer has chosen Red Panda, Raccoon decimates Red Panda!";
+    fightContext.children[0].style.color = "#32de84";
   } else if ((playerSelection == choices[1]) & (computerChoice == choices[2])) {
     // LOST
     computerScore++;
-    fightContext.children[0].textContent = "Fox is slashed by Red Panda!";
+    fightContext.children[0].textContent =
+      "Computer has chosen Red Panda, Fox is slashed by Red Panda!";
+    fightContext.children[0].style.color = "red";
   } else if ((playerSelection == choices[1]) & (computerChoice == choices[0])) {
     // WON
     playerScore++;
-    fightContext.children[0].textContent = "Fox annihilates Raccoon!";
+    fightContext.children[0].textContent =
+      "Computer has chosen Raccoon, Fox annihilates Raccoon!";
+    fightContext.children[0].style.color = "#32de84";
   } else if ((playerSelection == choices[2]) & (computerChoice == choices[0])) {
     // LOST
     computerScore++;
     fightContext.children[0].textContent =
-      "Red Panda is Obliterated by Raccoon!";
+      "Computer has chosen Raccoon, Red Panda is Obliterated by Raccoon!";
+    fightContext.children[0].style.color = "red";
   } else if ((playerSelection == choices[2]) & (computerChoice == choices[1])) {
     // WON
     playerScore++;
-    fightContext.children[0].textContent = `Red Panda slaughters Fox!`;
+    fightContext.children[0].textContent =
+      "Computer has chosen Fox, Red Panda slaughters Fox!";
+    fightContext.children[0].style.color = "#32de84";
   } else {
-    fightContext.children[0].textContent = `Something went wrong...`;
+    fightContext.children[0].textContent = "Something went wrong...";
+    fightContext.children[0].style.color = "purple"; // or any color you want for an error
   }
   score.children[0].textContent = `PLAYER:  ${playerScore}`;
   score.children[1].textContent = `COMPUTER:  ${computerScore}`;
@@ -96,9 +109,7 @@ function checkEndGame(playerScore, computerScore) {
     const popup = document.querySelector(".popup__container");
     const popupMessage = document.querySelector(".popup__message");
     const popupButton = document.querySelector(".popup__button");
-    popupButton.addEventListener("click", () => {
-      popupMessage.textContent = "Lion Is Stinky";
-    });
+    popupButton.addEventListener("click", resetGame);
 
     if (playerScore === 5) {
       popupMessage.textContent = "You Won!";
@@ -107,4 +118,25 @@ function checkEndGame(playerScore, computerScore) {
     }
     popup.style.display = "flex";
   }
+}
+function resetGame() {
+  // Reset scores
+  playerScore = 0;
+  computerScore = 0;
+
+  // Reset UI elements
+  fightContext.children[0].textContent = "";
+  score.children[0].textContent = `PLAYER:  ${playerScore}`;
+  score.children[1].textContent = `COMPUTER:  ${computerScore}`;
+  selection.style.display = "block";
+  score.style.display = "none";
+
+  // Enable buttons
+  rockRaccoon.style.pointerEvents = "auto";
+  paperFox.style.pointerEvents = "auto";
+  scissorsPanda.style.pointerEvents = "auto";
+
+  // Hide popup
+  const popup = document.querySelector(".popup__container");
+  popup.style.display = "none";
 }
