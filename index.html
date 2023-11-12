@@ -6,6 +6,13 @@
     <link rel="stylesheet" href="styles.css" />
     <link
       rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"
     />
 
@@ -35,11 +42,29 @@
           alt="Scissors"
         />
       </section>
-      <div class="description">
-        <div class="glitch" data-text="CHOOSE YOUR FIGHTER">
+      <div class="description .glitch-wrapper">
+        <div class="fighter__choice glitch" data-text="CHOOSE YOUR FIGHTER">
           CHOOSE YOUR FIGHTER
         </div>
+        <div class="score__board">
+          <div class="player__choice glitch" data-text="PLAYER: ">
+            PLAYER: 0
+          </div>
+          <div class="computer__choice glitch" data-text="COMPUTER: ">
+            COMPUTER: 0
+          </div>
+        </div>
+        <div class="fight__context">
+          <p></p>
+        </div>
       </div>
+      <div class="popup__container">
+        <div class="popup">
+          <h2 class="popup__message"></h2>
+          <button class="popup__button">Play Again?</button>
+        </div>
+      </div>
+
       <footer class="footer">
         <p class="copyright">RaccoonishDeveloper © 2023</p>
         <a href="https://github.com/RaccoonishDeveloper" target="_blank">
