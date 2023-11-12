@@ -54,16 +54,44 @@ button {
   flex-wrap: wrap;
   justify-content: space-evenly;
 }
+.selection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 .choice__image {
   max-width: 300px;
   height: auto;
   cursor: pointer;
   border: 1px transparent;
+  user-select: none;
 }
-.tie__container {
+.rock__icon,
+.paper__icon,
+.scissors__icon {
+  padding: 2px;
+  margin-top: 20px;
+  width: 30px;
+  height: auto;
+  text-align: center;
+  border: 1px solid black;
+  background-color: #06e153;
+  border-radius: 30px;
+  user-select: none;
 }
+
 .choice__image:hover {
-  filter: drop-shadow(0px 0px 25px #06e153);
+  filter: drop-shadow(0px 0px 15px #06e153);
+}
+.player {
+  box-shadow: 0px 0px 25px #06e153;
+}
+.computer {
+  box-shadow: 0px 0px 25px #f00;
+}
+.tie {
+  box-shadow: 10px 10px 25px 5px #06e153, -10px -10px 25px 5px #f00;
 }
 /* ----- POPUP ----- */
 

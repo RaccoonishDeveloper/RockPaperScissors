@@ -18,6 +18,7 @@
 
     <script defer src="scripts.js"></script>
     <title>Rock Paper Scissors</title>
+    <link rel="icon" type="image/x-icon" href="assets/TBD/raccoon.png" />
   </head>
   <body>
     <div class="wrapper">
@@ -26,21 +27,30 @@
         <h2 class="sub__title">(The Coon Version)</h2>
       </header>
       <section class="images">
-        <img
-          class="raccoon__rock choice__image"
-          src="assets/icons/raccoon.png"
-          alt="Rock"
-        />
-        <img
-          class="fox__paper choice__image"
-          src="assets/icons/fox.png"
-          alt="Rock"
-        />
-        <img
-          class="red-panda__scissors choice__image"
-          src="assets/icons/red-panda.png"
-          alt="Rock"
-        />
+        <div class="selection">
+          <img
+            class="raccoon__rock choice__image"
+            src="assets/icons/raccoon.png"
+            alt="Rock"
+          />
+          <img class="rock__icon" src="assets/info-icons/rock.png" />
+        </div>
+        <div class="selection">
+          <img
+            class="fox__paper choice__image"
+            src="assets/icons/fox.png"
+            alt="Rock"
+          />
+          <img class="paper__icon" src="assets/info-icons/paper.png" />
+        </div>
+        <div class="selection">
+          <img
+            class="red-panda__scissors choice__image"
+            src="assets/icons/red-panda.png"
+            alt="Rock"
+          />
+          <img class="scissors__icon" src="assets/info-icons/scissors.png" />
+        </div>
       </section>
       <div class="description .glitch-wrapper">
         <div class="fighter__choice glitch" data-text="CHOOSE YOUR FIGHTER">
