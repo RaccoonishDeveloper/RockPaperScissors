@@ -141,30 +141,30 @@ function resetGame() {
   popup.style.display = "none";
 }
 
-function getSelectionClass(playerSelection, computerChoice) {
-  // Remove any existing classes
-  rockRaccoon.classList.remove("player", "computer", "tie");
-  paperFox.classList.remove("player", "computer", "tie");
-  scissorsPanda.classList.remove("player", "computer", "tie");
+// function getSelectionClass(playerSelection, computerChoice) {
+//   // Remove any existing classes
+//   rockRaccoon.classList.remove("player", "computer", "tie");
+//   paperFox.classList.remove("player", "computer", "tie");
+//   scissorsPanda.classList.remove("player", "computer", "tie");
 
-  if (playerSelection === computerChoice) {
-    // It's a tie
-    rockRaccoon.classList.add("tie");
-    paperFox.classList.add("tie");
-    scissorsPanda.classList.add("tie");
-  } else if (
-    (playerSelection === "Rock" && computerChoice === "Scissors") ||
-    (playerSelection === "Paper" && computerChoice === "Rock") ||
-    (playerSelection === "Scissors" && computerChoice === "Paper")
-  ) {
-    // Player wins
-    rockRaccoon.classList.add("player");
-    paperFox.classList.add("player");
-    scissorsPanda.classList.add("player");
-  } else {
-    // Computer wins
-    rockRaccoon.classList.add("computer");
-    paperFox.classList.add("computer");
-    scissorsPanda.classList.add("computer");
-  }
-}
+//   if (playerSelection === computerChoice) {
+//     // It's a tie
+//     rockRaccoon.classList.add("tie");
+//     paperFox.classList.add("tie");
+//     scissorsPanda.classList.add("tie");
+//   } else if (
+//     (playerSelection === "Rock" && computerChoice === "Scissors") ||
+//     (playerSelection === "Paper" && computerChoice === "Rock") ||
+//     (playerSelection === "Scissors" && computerChoice === "Paper")
+//   ) {
+//     // Player wins
+//     rockRaccoon.classList.add("player");
+//     paperFox.classList.add("player");
+//     scissorsPanda.classList.add("player");
+//   } else {
+//     // Computer wins
+//     rockRaccoon.classList.add("computer");
+//     paperFox.classList.add("computer");
+//     scissorsPanda.classList.add("computer");
+//   }
+// }
